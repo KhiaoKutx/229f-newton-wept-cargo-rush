@@ -7,9 +7,14 @@ public class GameOver : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "player")
+        if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }
